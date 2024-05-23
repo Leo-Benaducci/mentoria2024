@@ -27,10 +27,10 @@ public class Calculadora {
     }
 
     public double dividir(double a, double b) {
-        divisao = a / b;
         if (b == 0) {
             throw new IllegalArgumentException("O Segundo numero não pode ser zero.");
         }
+        divisao = a / b;
         return divisao;
     }
 
