@@ -19,6 +19,10 @@ public class Calculadora {
         return (double) i / i1;
     }
 
+    public double media(int i, int i1, int i2) {
+        return (double) (i + i1 + i2)/3;
+    }
+
 
 }
 
