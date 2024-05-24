@@ -2,8 +2,6 @@ package br.com.lbenaducci;
 
 public class Calculadora {
 
-    private double CalculaMedia;
-
     public long somar(int i, int i1) {
 
         return i + i1;
@@ -18,9 +16,10 @@ public class Calculadora {
     }
 
     public double dividir(double i, double i1) {
-        if(i == 0 || i1 == 0){
+        if(i1 == 0){
             throw new IllegalArgumentException("Não é possível dividir por zero");
-        } return i / i1;
+        } else{ return i / i1;
+        }
     }
 
     public double media(double... numeros) {
