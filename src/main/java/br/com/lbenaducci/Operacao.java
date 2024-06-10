@@ -1,12 +1,13 @@
 package br.com.lbenaducci;
 
-public class Operacao implements Fator {
+public abstract class Operacao implements Fator {
 
+    public Operacao(Fator operador, Fator operador1) {
+    }
 
+    protected abstract Operador getOperador();
 
-    protected abstract double getOperador();
-
-    protected Operador getOperador(Operador operador, Operador operador1){
+    protected Operador getOperador(Fator operador, Fator operador1){
         if(operador == null || operador1 == null){
             throw new NullPointerException("Opera nulo não permitido");
         }

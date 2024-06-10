@@ -4,4 +4,5 @@ package br.com.lbenaducci;
 public interface Fator {
 
     public double isEqualTo();
+
 }

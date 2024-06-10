@@ -1,18 +1,18 @@
 package br.com.lbenaducci;
 
 public enum Operador  {
-    SOMA {
+    SOMA{
         @Override
         public double calc(double a, double b) {
             return a + b;
         }
     },
-    SUBTRACAO {
+    SUBTRACAO{
         public double calc(double a, double b) {
             return a - b;
         }
     },
-    MULTIPLICACAO {
+    MULTIPLICACAO{
         public double calc(double a, double b) {
             return a * b;
         }
