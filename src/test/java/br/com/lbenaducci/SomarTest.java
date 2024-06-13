@@ -7,18 +7,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class SomaTest {
 	@Test
 	void construtorTest() {
-		Operacao operacao = assertDoesNotThrow(() -> new Soma(() -> 2.0, () -> 3.0));
+		Operacao operacao = assertDoesNotThrow(() -> new Somar(() -> 2.0, () -> 3.0));
 		assertNotNull(operacao);
 		assertInstanceOf(Operacao.class, operacao);
 		assertInstanceOf(Fator.class, operacao);
 
-		assertThrows(NullPointerException.class, () -> new Soma(null, () -> 3.0));
-		assertThrows(NullPointerException.class, () -> new Soma(() -> 2.0, null));
+		assertThrows(NullPointerException.class, () -> new Somar(null, () -> 3.0));
+		assertThrows(NullPointerException.class, () -> new Somar(() -> 2.0, null));
 	}
 
 	@Test
 	void isEqualToTest() {
-		Operacao operacao = new Soma(() -> 3.0, () -> 2.0);
+		Operacao operacao = new Somar(() -> 3.0, () -> 2.0);
 		assertEquals(5.0, operacao.isEqualTo());
 	}
 }
