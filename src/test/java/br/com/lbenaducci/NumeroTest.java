@@ -1,5 +1,6 @@
 package br.com.lbenaducci;
 
+import br.com.lbenaducci.Classes.Fator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

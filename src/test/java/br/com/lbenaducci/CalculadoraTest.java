@@ -1,8 +1,5 @@
 package br.com.lbenaducci;
 
-import br.com.lbenaducci.Classes.Calculadora;
-import br.com.lbenaducci.Classes.Operacao;
-import br.com.lbenaducci.Classes.Soma;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

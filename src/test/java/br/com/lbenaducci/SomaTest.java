@@ -1,6 +1,5 @@
 package br.com.lbenaducci;
 
-import br.com.lbenaducci.Classes.Operacao;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
