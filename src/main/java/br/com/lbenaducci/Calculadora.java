@@ -3,7 +3,7 @@ package br.com.lbenaducci;
 public class Calculadora implements Fator {
 
 
-    private Operacao operacao;
+    private final Operacao operacao;
 
     public  Calculadora(Operacao operacao) {
         if(operacao == null){
