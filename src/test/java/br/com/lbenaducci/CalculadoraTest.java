@@ -1,34 +1,35 @@
 package br.com.lbenaducci;
 
+import br.com.lbenaducci.Classes.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-//class CalculadoraTest {
-//	@Test
-//	void ConstrutorTest() {
-//		Calculadora calculadora = assertDoesNotThrow(() -> new Calculadora(new Soma(() -> 2.0, () -> 3.0)));
-//		assertNotNull(calculadora);
-//
-//		assertThrows(NullPointerException.class, () -> new Calculadora(null));
-//	}
-//
-//	@Test
-//	void isEqualToTest() {
-//		Calculadora calculadora = new Calculadora(new Soma(() -> 2.0, () -> 3.0));
-//		assertEquals(5.0, calculadora.isEqualTo());
-//	}
-//
-//	@Test
-//	void somarTest() {
-//		Calculadora calculadora = new Calculadora(new Soma(() -> 2.0, () -> 3.0));
-//		assertEquals(7.0, calculadora.somar(2.0).isEqualTo());
-//		assertEquals(8.0, calculadora.somar(3.0).isEqualTo());
-//
-//		Operacao operacao = new Soma(() -> 1.0, () -> 4.0);
-//		assertEquals(10.0, calculadora.somar(operacao).isEqualTo());
-//	}
-//
+class CalculadoraTest {
+	@Test
+	void ConstrutorTest() {
+		Calculadora calculadora = assertDoesNotThrow(() -> new Calculadora(new Soma(() -> 2.0, () -> 3.0)));
+		assertNotNull(calculadora);
+
+		assertThrows(NullPointerException.class, () -> new Calculadora(null));
+	}
+
+	@Test
+	void isEqualToTest() {
+		Calculadora calculadora = new Calculadora(new Soma(() -> 2.0, () -> 3.0));
+		assertEquals(5.0, calculadora.isEqualTo());
+	}
+
+	@Test
+	void somarTest() {
+		Calculadora calculadora = new Calculadora(new Soma(() -> 2.0, () -> 3.0));
+		assertEquals(7.0, calculadora.somar(2.0).isEqualTo());
+		assertEquals(8.0, calculadora.somar(3.0).isEqualTo());
+
+		Operacao operacao = new Soma(() -> 1.0, () -> 4.0);
+		assertEquals(10.0, calculadora.somar(operacao).isEqualTo());
+	}
+}
 //	@Test
 //	void subtrairTest() {
 //		Calculadora calculadora = new Calculadora(new Subtracao(() -> 2.0, () -> 3.0));
