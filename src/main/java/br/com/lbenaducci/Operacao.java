@@ -1,21 +1,21 @@
 package br.com.lbenaducci;
 
 public abstract class Operacao implements Fator {
+    private final Fator esquerda;
+    private final Fator direita;
 
-    public Operacao(Fator operador, Fator operador1) {
-    }
-
-    protected abstract Operador getOperador();
-
-    protected Operador getOperador(Fator operador, Fator operador1){
-        if(operador == null || operador1 == null){
-            throw new NullPointerException("Opera nulo não permitido");
+    protected Operacao(Fator esquerda, Fator direita) {
+        if(esquerda == null || direita == null) {
+            throw new NullPointerException("Operação inválida");
         }
-        return Operador.SOMA;
+        this.esquerda = esquerda;
+        this.direita = direita;
     }
 
     @Override
     public double isEqualTo() {
-        return 0;
+        return getOperador().calc(esquerda.isEqualTo(), direita.isEqualTo());
     }
+
+    protected abstract Operador getOperador();
 }

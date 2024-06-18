@@ -5,20 +5,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculadoraTest {
-//	@Test
-//	void ConstrutorTest() {
-//		Calculadora calculadora = assertDoesNotThrow(() -> new Calculadora(new Soma(() -> 2.0, () -> 3.0)));
-//		assertNotNull(calculadora);
-//
-//		assertThrows(NullPointerException.class, () -> new Calculadora(null));
-//	}
-//
-//	@Test
-//	void isEqualToTest() {
-//		Calculadora calculadora = new Calculadora(new Soma(() -> 2.0, () -> 3.0));
-//		assertEquals(5.0, calculadora.isEqualTo());
-//	}
-//
+	@Test
+	void ConstrutorTest() {
+		Calculadora calculadora = assertDoesNotThrow(() -> new Calculadora(new Soma(() -> 2.0, () -> 3.0)));
+		assertNotNull(calculadora);
+
+		assertThrows(NullPointerException.class, () -> new Calculadora(null));
+	}
+
+	@Test
+	void isEqualToTest() {
+		Calculadora calculadora = new Calculadora(new Soma(() -> 2.0, () -> 3.0));
+		assertEquals(5.0, calculadora.isEqualTo());
+	}
+
 //	@Test
 //	void somarTest() {
 //		Calculadora calculadora = new Calculadora(new Soma(() -> 2.0, () -> 3.0));

@@ -20,12 +20,10 @@ public enum Operador  {
     DIVISAO{
         public double calc(double a, double b) {
             if(b ==0){
-                throw new NullPointerException("Impossivel dividir por 0");
+                throw new IllegalArgumentException("Impossivel dividir por 0");
             }
                 return a / b;
         }
     };
-
-
     public abstract double calc(double a, double b);
 }
