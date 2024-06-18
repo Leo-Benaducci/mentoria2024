@@ -24,6 +24,13 @@ public class Main {
 				• Pix
 				• Dinheiro
 			Onde todas as opções devem ter a função pagar que receberá o pedido.
+		4. Crie um restaurante.
+			Deve ter:
+				• Cardápio
+				• Formas de pagamento
+				• Pedidos
+			Deve ter uma função para registrar um novo pedido.
+			Deve ter uma função para pagar um pedido.
 		Lembre-se de usar enums, classes abstratas e interfaces.
 		Boa sorte!
 		 */
