@@ -44,14 +44,14 @@ public class Calculadora implements Fator {
     }
 
     public Calculadora dividir(double valor){
-        if (valor == 0){
-            throw new IllegalArgumentException("Divisão por 0 proibida");
-        }
         return new Calculadora(new Divisao(new Numero(this.isEqualTo()), new Numero(valor)));
     }
 
 
     public Calculadora dividir(Operacao operacao){
+        if (operacao == null){
+            throw new IllegalArgumentException("Divisão por 0 proibida");
+        }
         return new Calculadora(new Divisao(new Numero(this.isEqualTo()), new Numero(operacao.isEqualTo())));
     }
 
