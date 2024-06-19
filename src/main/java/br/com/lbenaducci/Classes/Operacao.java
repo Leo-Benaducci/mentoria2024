@@ -21,7 +21,7 @@ public abstract class Operacao implements Fator {
         double a = num1.get();
         double b = num2.get();
 
-        // Obtém o operador a ser utilizado (você precisa implementar o método getOperador())
+        // Obtém o operador a ser utilizado
         Operador operador = getOperador();
 
         // Realiza o cálculo utilizando o operador da enumeração Operador
@@ -29,8 +29,9 @@ public abstract class Operacao implements Fator {
     }
 
     protected abstract Operador getOperador(); // Deixei apenas a assinatura, você implementará na subclasse
-
 }
+
+
 
 
 
