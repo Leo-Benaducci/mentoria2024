@@ -8,11 +8,6 @@ public class Divisao extends Operacao {
     }
 
     @Override
-    public double isEqualTo() {
-        return super.isEqualTo();
-    }
-
-    @Override
     protected Operador getOperador() {
         return Operador.DIVISAO;
     }

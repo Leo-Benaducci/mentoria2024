@@ -8,15 +8,11 @@ public class Soma extends Operacao {
     }
 
     @Override
-    public double isEqualTo() {
-        return super.isEqualTo();
-    }
-
-    @Override
     protected Operador getOperador() {
         return Operador.SOMA;
     }
 }
+
 
 
 

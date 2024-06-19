@@ -3,7 +3,7 @@ import java.util.function.Supplier;
 
 public class Calculadora implements Fator {
 
-    private Operacao operacaoAtual;
+    private final Operacao operacaoAtual;
 
     public Calculadora(Operacao operacaoInicial) {
         if (operacaoInicial == null) {
@@ -18,59 +18,60 @@ public class Calculadora implements Fator {
     }
 
     public Calculadora somar(double num) {
-        Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
+        Supplier<Double> num1Supplier = operacaoAtual::isEqualTo;
         Supplier<Double> num2Supplier = () -> num;
-        operacaoAtual = new Soma(num1Supplier, num2Supplier);
-        return new Calculadora(operacaoAtual);
+        Operacao novaOperacao = new Soma(num1Supplier, num2Supplier);
+        return new Calculadora(novaOperacao);
     }
 
     public Calculadora somar(Operacao operacao) {
         Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
-        Supplier<Double> num2Supplier = operacao::isEqualTo;
-        operacaoAtual = new Soma(num1Supplier, num2Supplier);
-        return new Calculadora(operacaoAtual);
+        Supplier<Double> num2Supplier = () -> operacao.isEqualTo();
+        Operacao novaOperacao = new Soma(num1Supplier, num2Supplier);
+        return new Calculadora(novaOperacao);
+    }
+
+    public Calculadora subtrair(double num) {
+        Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
+        Supplier<Double> num2Supplier = () -> num;
+        Operacao novaOperacao = new Subtracao(num1Supplier, num2Supplier);
+        return new Calculadora(novaOperacao);
+    }
+
+    public Calculadora subtrair(Operacao operacao) {
+        Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
+        Supplier<Double> num2Supplier = () -> operacao.isEqualTo();
+        Operacao novaOperacao = new Subtracao(num1Supplier, num2Supplier);
+        return new Calculadora(novaOperacao);
+
+    }
+
+    public Calculadora multiplicar(double num) {
+        Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
+        Supplier<Double> num2Supplier = () -> num;
+        Operacao novaOperacao = new Multiplicacao(num1Supplier, num2Supplier);
+        return new Calculadora(novaOperacao);
+    }
+
+    public Calculadora multiplicar(Operacao operacao) {
+        Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
+        Supplier<Double> num2Supplier = () -> operacao.isEqualTo();
+        Operacao novaOperacao = new Multiplicacao(num1Supplier, num2Supplier);
+        return new Calculadora(novaOperacao);
+    }
+
+    public Calculadora dividir(double num) {
+        Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
+        Supplier<Double> num2Supplier = () -> num;
+        Operacao novaOperacao = new Divisao(num1Supplier, num2Supplier);
+        return new Calculadora(novaOperacao);
+    }
+
+    public Calculadora dividir(Operacao operacao) {
+        Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
+        Supplier<Double> num2Supplier = () -> operacao.isEqualTo();
+        Operacao novaOperacao = new Divisao(num1Supplier, num2Supplier);
+        return new Calculadora(novaOperacao);
     }
 }
-
-//    public Calculadora subtrair(double num) {
-//        Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
-//        Supplier<Double> num2Supplier = () -> num;
-//        operacaoAtual = new Operacao(num1Supplier, num2Supplier) {
-//            @Override
-//            protected Operador getOperador() {
-//                return Operador.SUBTRACAO;
-//            }
-//        };
-//        return this;
-//    }
-//
-//    public Calculadora multiplicar(double num) {
-//        Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
-//        Supplier<Double> num2Supplier = () -> num;
-//        operacaoAtual = new Operacao(num1Supplier, num2Supplier) {
-//            @Override
-//            protected Operador getOperador() {
-//                return Operador.MULTIPLICACAO;
-//            }
-//        };
-//        return this;
-//    }
-//
-//    public Calculadora dividir(double num) {
-//        Supplier<Double> num1Supplier = () -> operacaoAtual.isEqualTo();
-//        Supplier<Double> num2Supplier = () -> num;
-//        operacaoAtual = new Operacao(num1Supplier, num2Supplier) {
-//            @Override
-//            protected Operador getOperador() {
-//                return Operador.DIVISAO;
-//            }
-//        };
-//        return this;
-//    }
-//}
-
-
-
-
-
 
