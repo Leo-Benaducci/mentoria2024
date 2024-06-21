@@ -3,7 +3,8 @@ package br.com.lbenaducci;
 public class Pix implements Pagamento{
 
     @Override
-    public void pagar(Pedido pedido) {
-        System.out.println("Pagamento realizado com pix para o pedido " + pedido);
+    public String pagar(Pedido pedido) {
+        double valorTotal = pedido.valorTotal();
+        return "Pagamento de R$" + valorTotal +" realizado no Pix";
     }
 }

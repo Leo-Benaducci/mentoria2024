@@ -3,7 +3,8 @@ package br.com.lbenaducci;
 public class Dinheiro implements  Pagamento{
 
     @Override
-    public void pagar(Pedido pedido) {
-        System.out.println("Pagamento realizado em dinheiro para o pedido " + pedido);
+    public String pagar(Pedido pedido) {
+        double valorTotal = pedido.valorTotal();
+        return "Pagamento de R$" + valorTotal +" realizado no dinheiro";
     }
 }

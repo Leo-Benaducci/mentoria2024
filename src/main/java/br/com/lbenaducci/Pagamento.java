@@ -1,6 +1,7 @@
 package br.com.lbenaducci;
 
+@FunctionalInterface
 public interface Pagamento {
 
-    void pagar(Pedido pedido);
+    String pagar(Pedido pedido);
 }
