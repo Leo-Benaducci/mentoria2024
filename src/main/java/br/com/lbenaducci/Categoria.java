@@ -5,6 +5,6 @@ public enum Categoria {
     PRINCIPAL,
     SOBREMESA,
     BEBIDA,
-    COMBO;
+    COMBO
 
 }

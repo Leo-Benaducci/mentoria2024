@@ -2,7 +2,7 @@ package br.com.lbenaducci;
 
 public class Prato extends Item{
 
-    private String descricao;
+    private final String descricao;
 
     public Prato(String nome, double preco, Categoria categoria, String descricao) {
         super(nome, preco, categoria.ENTRADA);

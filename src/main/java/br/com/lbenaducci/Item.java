@@ -2,9 +2,9 @@ package br.com.lbenaducci;
 
 public abstract class Item {
 
-    private String nome;
-    private double preco;
-    private Categoria categoria;
+    private final String nome;
+    private final double preco;
+    private final Categoria categoria;
 
 
     public Item(String nome, double preco, Categoria categoria) {
