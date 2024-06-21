@@ -13,12 +13,10 @@ public class Combo extends Item{
 
     @Override
     public String descricao() {
-        return "";
+        return "Combo itens " + itens;
     }
 
     public List<Item> getItens() {
         return itens;
     }
-
-
 }
