@@ -1,9 +1,9 @@
 package br.com.lbenaducci;
 
 public abstract class Item {
-    private String Nome;
-    private double Preco;
-    private Categoria Categoria;
+    private final String Nome;
+    private final double Preco;
+    private final Categoria Categoria;
 
     public Item(String Nome, double Preco, Categoria Categoria) {
         this.Nome = Nome;
