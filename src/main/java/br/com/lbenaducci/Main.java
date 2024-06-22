@@ -9,6 +9,8 @@ public class Main {
 				• Nome
 				• Preço
 				• Categoria
+				(FEITO)
+
 			Crie alguns tipos de itens para o cardápio. Para cada tipo item do cardápio será uma nova classe. Ex:
 				• Bebida (item base)
 				• Prato (item base + descricao)
