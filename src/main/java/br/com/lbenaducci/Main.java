@@ -15,16 +15,22 @@ public class Main {
 				• Bebida (item base)
 				• Prato (item base + descricao)
 				• Combo (item base + lista de itens)
+				(FEITO)
+
 		2. Crie um cadastro de pedidos de um cliente.
 			Os pedidos não podem ser alterados (record) e devem ter:
 				• Numero de mesa
 				• Lista de itens
 				• Valor total
+				(FEITO)
+
 		3. Crie um sistema de pagamentos.
 			Com as seguintes opções:
 				• Cartão
 				• Pix
 				• Dinheiro
+
+
 			Onde todas as opções devem ter a função pagar que receberá o pedido.
 		4. Crie um restaurante.
 			Deve ter:
