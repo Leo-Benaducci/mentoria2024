@@ -26,5 +26,6 @@ public abstract class Item {
         return categoria;
     }
 
+    // Você adicionou a descrição a todos os itens, mas bebidas e combos esse item não era obrigatório
     public abstract String descricao();
 }
