@@ -31,6 +31,7 @@ public class Restaurante {
         pedidos.add(pedido);
     }
 
+    // Não ta usando a forma de pagamento, voce só quis passar nos testes, não pensou na regra de negócio de um restaurante.
     public void pagar(int mesa, Pagamento formaPagamento) {
         Pedido pedidoParaPagar = null;
         for (Pedido pedido : pedidos) {
