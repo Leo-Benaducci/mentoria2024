@@ -11,7 +11,7 @@ public class Restaurante {
     public Restaurante(List<Item> cardapio, List<Pagamento> formasPagamento) {
         this.cardapio = cardapio;
         this.formasPagamento = formasPagamento;
-        this.pedidos = new ArrayList<Pedido>();
+        this.pedidos = new ArrayList<Pedido>(); // Inicialização do ArrayList com genérico declarado, eu expliquei que isso é redundante durante as aulas
     }
 
     public List<Item> getCardapio() {
@@ -31,6 +31,7 @@ public class Restaurante {
         pedidos.add(pedido);
     }
 
+    // Não ta usando a forma de pagamento, voce só quis passar nos testes, não pensou na regra de negócio de um restaurante.
     public void pagar(int mesa, Pagamento formasPagamento) {
         Pedido pedidoParaPagar =null;
         for (Pedido pedido : pedidos) {
