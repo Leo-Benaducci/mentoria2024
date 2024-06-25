@@ -18,7 +18,7 @@ public class Restaurante {
         pedidos.add(pedido);
     }
 
-
+    // Sabe me explicar o que esta fazendo aqui? O que é uma stream? O que o filter faz? O que o findFirst faz?  O que o orElse faz?
     private Pedido encontrarPedidoPorMesa(int numeroMesa) {
         return pedidos.stream()
                 .filter(pedido -> pedido.mesa() == numeroMesa)
